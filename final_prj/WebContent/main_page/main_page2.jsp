@@ -16,15 +16,16 @@
 	@font-face { font-family: 'Eoe_Zno_EB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_EB.woff') format('woff'); font-weight: normal; font-style: normal; }
 	@font-face { font-family: 'GoyangIlsan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff'); font-weight: bold; font-style: normal; }
 	/* 헤더시작 */
-	#header{  background-color: #333C50;  height: 69px;   }
-	#hMenu{  height: 69px ; }
-	#hContent{  }
+	#header{/* position: relative; */ background-color: #333C50; height: 69px}
+	#hMenu{width: ; margin: 0px auto; position: absolute;left: 200px;height: 69px ;}
+	#hContent{ position: relative; left: 5px}
 	#hTitle{font-family:'Staatliches', cursive; color: #F0F0E2 ;font-size: 40px; }
 	#hLogo{ padding-top:10px;   width: 40px; height: 50px ; }
-	#navbarSupportedContent{font-family: 'Eoe_Zno_EB', sans-serif; font-weight:nomal; color: #A9A19B  ;font-size: 25px; margin-left: 35%;  }
+	#navbarSupportedContent{font-family: 'Eoe_Zno_EB', sans-serif; font-weight:nomal; color: #A9A19B  ;font-size: 25px;  }
+	#navbarDropdown{padding-left: 20px}
 	#dropItem{font-family: 'GoyangIlsan', sans-serif; font-weight:bold; background-color: #A9A19B;  font-size: 18px;  }
-	#hMenuName{background-color: }
-	#loginT{margin-left:  85%}
+	#hLogin{ padding-left: 540px;  } 
+	#hMenuName{position: relative; width: 800px}
 	.dropdown-toggle:after { content: none }/* 화살표 없애기 */
  	.nav .dropdown:hover .dropdown-menu {
 	display: block; 
@@ -39,9 +40,8 @@
 	/* 헤더끝 */
 	/* 컨테이너 시작 */
 	/* 점보트론 시작*/
-	#containerJumbo{background-color: #141A1D; height: 370px ;height: auto; }
-	/* #jumbotronB{ background-image: url(http://localhost:8080/ui_prj3/main_page/images/jumbo.png); border-radius:0px; background-color: #080D07; margin: 0px auto;  width: 1500px;  height: 370px}*/
-	
+	#containerJumbo{background-color: #141A1D; height: 370px  }
+	#jumbotronB{ background-image: url(http://localhost:8080/ui_prj3/main_page/images/jumbo.png); border-radius:0px; background-color: #080D07; margin: 0px auto; width: 1500px; height: 370px}
 	#orderBtn{width: 300px; height: 80px; margin-top: 70px}
 	.btn-dark, .btn-dark:hover, .btn-dark:active, .btn-dark:visited{
     background-color: #141A1D;
@@ -50,7 +50,7 @@
 	/* 점보트론  끝*/
 	
 	/* 컨텐츠 컨테이너 시작 */
-	#containerContent{max-width: 1450px; border: 1px solid red; height: 600px}
+	#containerContent{max-width: 1450px; margin: auto; border: 1px solid red; height: 600px}
 	.contentName{
 	font-family:Eoe_Zno_EB;
 	font-size: 25px;
@@ -76,9 +76,6 @@
 	}
 	/* 컨텐츠 컨테이너 끝 */
 	/* 컨테이너 끝 */
-	 /* 푸터 시작 */
- 
-   /* 푸터 끝 */
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -96,73 +93,39 @@ $(function() {
 <body>
 <div id="coffeWrap">
  
-<div id="header">
-	<div id="hMenu" class="container d-flex justify-content-between" >
-	<nav class="navbar navbar-expand-lg navbar-light" style="height: 69px" >
-	<div id="hContent" >
-	  <a id="hTitle" class="navbar-brand" href="#" >
-	    <img id="hLogo" src="http://localhost:8080/ui_prj3/main_page/images/logo.png" class="d-inline-block align-top" alt="" >
-	    Yul's Coffee  
-	  </a>
-	</div>
-	  <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
-	  </button> 
-	  <div id="hMenuName">
-	   <div class="collapse navbar-collapse"  id="navbarSupportedContent" > 
-	    <ul class="navbar-nav mr-auto" >
-
-	      <li class="nav-item dropdown">
-	       <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	         <span style="color: #F0F0E1"> 메뉴</span>
-	       </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
-	          <a class="dropdown-item" href="#">커피</a>
-	          <a class="dropdown-item" href="#">티</a>
-	          <a class="dropdown-item" href="#">율리치노</a>
-	          <a class="dropdown-item" href="#">디저트</a>
-	        </div>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true">
-	         <span style="color: #F0F0E1"> 공지사항</span>
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
-	          <a class="dropdown-item" href="#">공지사항 및 이벤트</a>
-	        </div>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          <span style="color: #F0F0E1">소개</span>
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
-	          <a class="dropdown-item" href="#">About</a>
-	          <a class="dropdown-item" href="#">위치</a>
-	  
-	        </div>
-	      </li>
-	       <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          <span style="color: #F0F0E1">고객센터</span>
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
-	          <a class="dropdown-item" href="#">1:1 문의</a>
-	        </div>
-	      </li>
-	      
-	      <div class="nav-item" id="loginT">
-	        <span data-toggle="tooltip" data-placement="bottom"  title="로그인" >
-      		 <a class="nav-link" href="#" style="color: #A9A19B;">
-	       		<img src="http://localhost:8080/ui_prj3/main_page/images/login_button2.png" style="width: 40px" />
-        	 </a>
-	        </span>
-      	</div>
-	     
-	    </ul>
- 	  </div>
- 	  </div>
-	</nav>  
-	</div>
+<div id="header" style="background-color: black;">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+<img id="hLogo" src="http://localhost:8080/ui_prj3/main_page/images/logo.png" class="d-inline-block align-top" alt="" >
+  Yul's Coffee
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
 </div>
 <div id="containerJumbo">
 	<div class="jumbotron" id="jumbotronB" >
@@ -207,24 +170,16 @@ $(function() {
     </div>
     <div class="col-6 col-md-4" >
   	 <div  class="contentName">위치</div>
-  	 <div class="card">
   	 <div style="background-color: black; height: 290px">
-<!-- 	<img alt="" src="http://localhost:8080/ui_prj3/main_page/images/location1.png" style="height: 284px; width: 455px"/> -->
-	 <img src="http://localhost:8080/ui_prj3/main_page/images/location1.png" class="card-img-top" alt="...">
+	<img alt="" src="http://localhost:8080/ui_prj3/main_page/images/location1.png" style="height: 284px; width: 455px"/>
   	 </div>
-  	 </div>
-  	 
     </div>
   </div>
 </div>
-
-<footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </div>
- </footer>
-
-
 </div>
+
+
+
+
 </body>
 </html>
