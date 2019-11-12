@@ -11,10 +11,10 @@
 <style type="text/css">
 	 #class4Wrap{width: 900px; height: 1100px; margin: 0px auto; }
    /* 헤더 시작 */
-   #header{width: 900px; height: 150px; position:relative; /* background-color: #ACFFFF */ background: #FFF url(http://localhost:8080/jsp_prj/common/images/header3.png) repeat-x;}
+/*    #header{width: 900px; height: 150px; position:relative; /* background-color: #ACFFFF */ background: #FFF url(http://localhost:8080/jsp_prj/common/images/header3.png) repeat-x;}
    #hLogo{width: 84px; height: 84px; position:absolute; top:10px; left:50px; /* background-color: #FF85FF */}
    #hContent{width: 700px; height: 90px; padding-top:10px; position:absolute; top:0px; left:200px; /* background-color: #FF85FF */}
-   #naviBar{width: 900px; height: 50px; position:absolute; top:100px; /* background-color: #ACACFF */}
+   #naviBar{width: 900px; height: 50px; position:absolute; top:100px; /* background-color: #ACACFF */} */
    /* 헤더 끝 */
    /* 컨테이너 시작 */
    #container{width: 900px; height: 800px; /* background-color: #F36C77 */}
@@ -37,14 +37,20 @@ $(function() {
 <div id="class4Wrap">
    <!-- 900(w)x1100(h) -->
 <div id="header">
-  
-   <div id="hLogo">
-      <a href="#"><img src="http://localhost:8080/jsp_prj/common/images/logo4.png" title="로고"></a>
-   </div>
-   <div id="hContent">
-      <span id="hTitle">Class Four</span>
-   </div>
-   <div id="naviBar"><!-- 900(w)x50(h)네비게이션 --></div>
+  <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+  </div>
+</nav>
 </div>
 <div>
    <div id="container">

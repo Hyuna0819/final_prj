@@ -17,14 +17,14 @@
 	@font-face { font-family: 'GoyangIlsan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff'); font-weight: bold; font-style: normal; }
 	/* 헤더시작 */
 	#header{  background-color: #333C50;  height: 69px;   }
-	#hMenu{  height: 69px ; }
-	#hContent{  }
+	#hLogo{  padding-top:10px; width: 40px; height: 50px ; }
 	#hTitle{font-family:'Staatliches', cursive; color: #F0F0E2 ;font-size: 40px; }
-	#hLogo{ padding-top:10px;   width: 40px; height: 50px ; }
+	/* #hMenu{  height: 69px ; }
+	#hContent{  }
 	#navbarSupportedContent{font-family: 'Eoe_Zno_EB', sans-serif; font-weight:nomal; color: #A9A19B  ;font-size: 25px; margin-left: 35%;  }
 	#dropItem{font-family: 'GoyangIlsan', sans-serif; font-weight:bold; background-color: #A9A19B;  font-size: 18px;  }
 	#hMenuName{background-color: }
-	#loginT{margin-left:  85%}
+	#loginT{margin-left:  85%} */
 	.dropdown-toggle:after { content: none }/* 화살표 없애기 */
  	.nav .dropdown:hover .dropdown-menu {
 	display: block; 
@@ -50,7 +50,7 @@
 	/* 점보트론  끝*/
 	
 	/* 컨텐츠 컨테이너 시작 */
-	#containerContent{max-width: 1450px; border: 1px solid red; min-height: 600px}
+	#containerContent{max-width: 1450px; border: 1px solid red; height: 600px}
 	.contentName{
 	font-family:Eoe_Zno_EB;
 	font-size: 25px;
@@ -71,13 +71,8 @@
 	.card-img-top{
 	height: 250px;
 	}
-	
 	.card-body{
 	padding: 5px;
-	}
-	
-	th{
-	width: 80%; 
 	}
 	/* 컨텐츠 컨테이너 끝 */
 	/* 컨테이너 끝 */
@@ -89,6 +84,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 $(function() {
 		/*툴팁  */
@@ -99,16 +95,35 @@ $(function() {
 </head>
 <body>
 <div id="coffeWrap">
- 
 <div id="header">
-	<div id="hMenu" class="container d-flex justify-content-between" >
-	<nav class="navbar navbar-expand-lg navbar-light" style="height: 69px" >
+	<div id="hMenu"  >
+<!-- 	class="container d-flex justify-content-between" -->
+     <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+  <div id="hTitle">
+    <a class="py-2" href="#">
+      <img id="hLogo" src="http://localhost:8080/ui_prj3/main_page/images/logo.png" class="d-inline-block align-top" alt="" >
+	    Yul's Coffee  
+	  </a>
+  </div>
+  
+    <a class="py-2 d-none d-md-inline-block" href="#">메뉴</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">공지사항</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">소개</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">고객센터</a>
+    <a class="py-2 d-none d-md-inline-block" href="#" style="padding-left: 30%">로그인</a>
+  </div>
+</nav>
+	<!-- <nav class="navbar navbar-expand-lg navbar-light" style="height: 69px" >
 	<div id="hContent" >
 	  <a id="hTitle" class="navbar-brand" href="#" >
 	    <img id="hLogo" src="http://localhost:8080/ui_prj3/main_page/images/logo.png" class="d-inline-block align-top" alt="" >
 	    Yul's Coffee  
 	  </a>
-	</div>   
+	</div>
+	  <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+	  </button> 
 	  <div id="hMenuName">
 	   <div class="collapse navbar-collapse"  id="navbarSupportedContent" > 
 	    <ul class="navbar-nav mr-auto" >
@@ -157,12 +172,12 @@ $(function() {
 	       		<img src="http://localhost:8080/ui_prj3/main_page/images/login_button2.png" style="width: 40px" />
         	 </a>
 	        </span>
-      		</div>
+      	</div>
 	     
 	    </ul>
  	  </div>
  	  </div>
-	</nav>  
+	</nav>   -->
 	</div>
 </div>
 <div id="containerJumbo">
@@ -171,8 +186,10 @@ $(function() {
 	  <p class="lead">바로지금 홈페이지에서 주문가능!</p>
 	  <a class="btn btn-dark btn-lg" href="#" role="button" id="orderBtn" style="font-family:'Staatliches', cursive; font-size: 43px">Order Now</a>
 </div>
+
 </div>
 <div class="container" id="containerContent"  >
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
   <div class="row" style="height: 350px; border: 1px solid #333;" >
     <div class="col-12 col-md-8" id="monthMenu" >
     <div class="contentName">추천 메뉴</div>
@@ -206,48 +223,24 @@ $(function() {
     </div>
     <div class="col-6 col-md-4" >
   	 <div  class="contentName">위치</div>
-  	 <a href="#void">
-  	  <div class="card">
-   		 <img src="http://localhost:8080/ui_prj3/main_page/images/location1.png" class="card-img" height="100%" alt="...">
- 	 </div>
-   	</a>
+  	 <div class="card">
+  	 <div style="background-color: black; height: 290px">
+<!-- 	<img alt="" src="http://localhost:8080/ui_prj3/main_page/images/location1.png" style="height: 284px; width: 455px"/> -->
+	 <img src="http://localhost:8080/ui_prj3/main_page/images/location1.png" class="card-img-top" alt="...">
+  	 </div>
+  	 </div>
+  	 
     </div>
-    <div class="col-6" style="border: 1px solid purple; min-height: 250px;">
-    <div class="contentName">공지사항 및 이벤트</div>
-    <div id="noticeTable">
-    <table class="table table-borderless">
-	  <tbody>
-	    <tr >
-	      <th scope="row">제목</th>
-	      <td style="padding-right: 5%;">게시일</td>
-	    </tr>
-	    <tr>
-	      <th scope="row">제목</th>
-	      <td style="padding-right: 5%;">게시일</td>
-	    </tr>
-	  </tbody>
-	</table>
-    
-    </div>
-    </div>
-    <div class="col-6" style="border: 1px solid #333; min-height: 250px;">
-    	<div class="contentName">about</div>
-    
-    </div>
-	</div>
+  </div>
 </div>
 
-<div id="footer" style="background-color: black" >
-	<div id="fInner" style="width: 70%; margin-left: auto; margin-right: auto">
-		<p class="text-left">Left aligned text on all viewport sizes.</p>
-		<p class="text-center">법인명: (주) 할리스에프앤비 대표자: 김유진 사업자등록번호 211-87-61044 통신판매업: 제2019-서울종로-0193호 </p>
-		<p class="text-center">주소 : 서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 : 02-2188-7100 (가맹문의 : 1670-4432) </p>
-		<p class="text-right">Right aligned text on all viewport sizes.</p>
-	</div>
+<footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    </div>
+ </footer>
+
+
 </div>
-</div>
-
-
-
 </body>
 </html>
