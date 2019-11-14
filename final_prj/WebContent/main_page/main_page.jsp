@@ -17,14 +17,14 @@
 	@font-face { font-family: 'GoyangIlsan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GoyangIlsan.woff') format('woff'); font-weight: bold; font-style: normal; }
 	/* 헤더시작 */
 	#header{  background-color: #333C50;  height: 69px;   }
-	#hMenu{  height: 69px ; }
+	#hMenu{  height: 69px ; max-width: 1300px}
 	#hContent{  }
 	#hTitle{font-family:'Staatliches', cursive; color: #F0F0E2 ;font-size: 40px; }
 	#hLogo{ padding-top:10px;   width: 40px; height: 50px ; }
 	#navbarSupportedContent{font-family: 'Eoe_Zno_EB', sans-serif; font-weight:nomal; color: #A9A19B  ;font-size: 25px; margin-left: 35%;  }
 	#dropItem{font-family: 'GoyangIlsan', sans-serif; font-weight:bold; background-color: #A9A19B;  font-size: 18px;  }
 	#hMenuName{background-color: }
-	#loginT{margin-left:  85%}
+	#loginT{margin-left:  100%}
 	.dropdown-toggle:after { content: none }/* 화살표 없애기 */
  	.nav .dropdown:hover .dropdown-menu {
 	display: block; 
@@ -50,7 +50,7 @@
 	/* 점보트론  끝*/
 	
 	/* 컨텐츠 컨테이너 시작 */
-	#containerContent{max-width: 1450px; border: 1px solid red; min-height: 600px}
+	#containerContent{max-width: 1450px; border: 1px solid red; min-height: 600px;margin-bottom: 30px }
 	.contentName{
 	font-family:Eoe_Zno_EB;
 	font-size: 25px;
@@ -82,6 +82,11 @@
 	/* 컨텐츠 컨테이너 끝 */
 	/* 컨테이너 끝 */
 	 /* 푸터 시작 */
+	 #footer{ background-color: #333C50; padding-top: 1%; padding-bottom: 1% }
+	 #fInner{ width: 65%; margin-left: auto; margin-right: auto }
+	.text-left{
+	
+	}
  
    /* 푸터 끝 */
 </style>
@@ -90,6 +95,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript">
+window.onresize=function(){
+	console.log($("#innerContent").css("height"));
+}
 $(function() {
 		/*툴팁  */
 		$('[data-toggle="tooltip"]').tooltip()
@@ -173,7 +181,7 @@ $(function() {
 </div>
 </div>
 <div class="container" id="containerContent"  >
-  <div class="row" style="height: 350px; border: 1px solid #333;" >
+  <div class="row" id="innerContent" style="height: 350px; border: 1px solid #333;" >
     <div class="col-12 col-md-8" id="monthMenu" >
     <div class="contentName">추천 메뉴</div>
     <div class="card-deck">
@@ -237,12 +245,12 @@ $(function() {
 	</div>
 </div>
 
-<div id="footer" style="background-color: black" >
-	<div id="fInner" style="width: 70%; margin-left: auto; margin-right: auto">
-		<p class="text-left">Left aligned text on all viewport sizes.</p>
-		<p class="text-center">법인명: (주) 할리스에프앤비 대표자: 김유진 사업자등록번호 211-87-61044 통신판매업: 제2019-서울종로-0193호 </p>
-		<p class="text-center">주소 : 서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 : 02-2188-7100 (가맹문의 : 1670-4432) </p>
-		<p class="text-right">Right aligned text on all viewport sizes.</p>
+<div id="footer">
+	<div id="fInner" >
+		<p class="text-left" style="margin-bottom: 0px; color: #D5CEC6">
+		대표자: 김율 | 사업자등록번호 123-89-191114 | 통신판매업: 제2019-서울강남-0187호 <br/>
+		주소 : 서울특별시 강남구 테헤란로 132 | 대표전화 : 02-1114-3355 (가맹문의 : 1114-3355) <br/>
+		© 2019 Yul's Coffee. All rights reserved </p>
 	</div>
 </div>
 </div>
