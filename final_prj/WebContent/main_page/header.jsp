@@ -18,7 +18,7 @@
 	       <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	         <span style="color: #F0F0E1"> 메뉴</span>
 	       </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E1" id="dropItem">
 	          <a class="dropdown-item" href="#">커피</a>
 	          <a class="dropdown-item" href="#">티</a>
 	          <a class="dropdown-item" href="#">율리치노</a>
@@ -29,7 +29,7 @@
 	        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true">
 	         <span style="color: #F0F0E1"> 공지사항</span>
 	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E1" id="dropItem">
 	          <a class="dropdown-item" href="#">공지사항 및 이벤트</a>
 	        </div>
 	      </li>
@@ -37,7 +37,7 @@
 	        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          <span style="color: #F0F0E1">소개</span>
 	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E2" id="dropItem">
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #F0F0E1" id="dropItem">
 	          <a class="dropdown-item" href="#">About</a>
 	          <a class="dropdown-item" href="#">위치</a>
 	  
